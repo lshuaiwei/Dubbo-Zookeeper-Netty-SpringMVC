@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:mvc="http://www.springframework.org/schema/mvc"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+    http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+
+
+
+
+    <!-- Enables the Spring MVC @Controller programming model -->
+    <annotation-driven  />
+  <!--  <resources mapping="/**" location="/"/>-->
+
+    <!-- Configures Handler Interceptors 
+    <context:property-placeholder location="classpath:application.properties" ignore-unresolvable="true"/>
+-->
+  <!--  <beans:bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <beans:property name="viewResolvers">
+            <beans:list>
+                <beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
+                <beans:bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+                    <beans:property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+                    <beans:property name="prefix" value="/WEB-INF/views/"/>
+                    <beans:property name="suffix" value=".jsp"/>
+                </beans:bean>
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+    <beans:bean class="org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver">
+        <beans:property name="order" value="0"/>
+    </beans:bean>
+    <beans:bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <beans:property name="order" value="1"/>
+        <beans:property name="defaultStatusCode" value="500"/>
+    </beans:bean>-->
+
+    <context:component-scan base-package="dubbo.consumer.controller"></context:component-scan>
+
+    <!--<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>-->
+
+
+
+</beans:beans>
